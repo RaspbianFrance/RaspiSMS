@@ -216,10 +216,7 @@ abstract class AbstractDaemon
         foreach ($this->signals as $signal)
         {
             //For each signal define the method handle_signal of the current class as the way to handle it
-            @pcntl_signal($signal, [
-                'self',
-                'handle_signal',
-            ]);
+            pcntl_signal($signal, [$this, 'handle_signal']);
         }
     }
 }

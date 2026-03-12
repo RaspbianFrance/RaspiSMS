@@ -2,29 +2,19 @@
 #
 # Script to stop RaspiSMS daemons
 #
-PID_DIR="/var/run/raspisms"
-DAEMON_LAUNCHER_PID_FILE="/var/run/raspisms/RaspiSMS Daemon Launcher.pid"
-PID_FILES=$PID_DIR/*.pid
+SCRIPT=$(readlink -f "$0")
+RASPISMS_DIR=$(readlink -f "${SCRIPT%/*}/../")
 
+# Read config from PHP
+PID_DIR=$(php -r "require '$RASPISMS_DIR/descartes/load.php'; echo PWD_PID;")
 
-kill_process()
-{
-    local PID=$1
-    kill "$PID"
+DAEMON_LAUNCHER_PID_FILE="$PID_DIR/RaspiSMS Daemon Launcher.pid"
 
-    return $?
-}
-
-#Kill daemon launcher if available
-if [ -f "$DAEMON_LAUNCHER_PID_FILE" ]
-then
+# Kill daemon launcher if available
+if [ -f "$DAEMON_LAUNCHER_PID_FILE" ]; then
     printf "Stop RaspiSMS daemon Launcher..."
     PID=$(cat "$DAEMON_LAUNCHER_PID_FILE")
-    $(kill_process "$PID")
-    RETURN=$?
-
-    if [ $RETURN -eq 0 ]
-    then
+    if kill "$PID" 2>/dev/null; then
         rm -f "$DAEMON_LAUNCHER_PID_FILE"
         printf "success.\n"
     else
@@ -35,14 +25,13 @@ fi
 
 sleep 1
 
+# Kill remaining daemons
 printf "Stop RaspiSMS remaining daemons..."
-for f in $PID_FILES
-do
-    [ -f "$f" ] || continue #Bypass no real file return on empty dir
-
+for f in "$PID_DIR"/*.pid; do
+    [ -f "$f" ] || continue
     printf "."
     PID=$(cat "$f")
-    kill_process "$PID"
+    kill "$PID" 2>/dev/null
     rm -f "$f"
 done
 printf "Done.\n"
