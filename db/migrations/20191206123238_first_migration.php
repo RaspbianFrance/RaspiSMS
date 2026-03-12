@@ -20,7 +20,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('id_user', 'integer', [
                 'null' => false,
@@ -63,7 +63,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('id_user', 'integer', [
                 'null' => false,
@@ -101,7 +101,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('id_user', 'integer', [
                 'null' => false,
@@ -146,7 +146,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('id_user', 'integer', [
                 'null' => false,
@@ -189,7 +189,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('id_user', 'integer', [
                 'null' => false,
@@ -220,7 +220,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('id_group', 'integer', [
                 'null' => false,
@@ -253,7 +253,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('id_scheduled', 'integer', [
                 'null' => false,
@@ -284,7 +284,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('id_user', 'integer', [
                 'null' => false,
@@ -329,7 +329,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('at', 'datetime', [
                 'null' => false,
@@ -382,7 +382,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('id_user', 'integer', [
                 'null' => false,
@@ -430,7 +430,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('id_scheduled', 'integer', [
                 'null' => false,
@@ -463,7 +463,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('id_scheduled', 'integer', [
                 'null' => false,
@@ -496,7 +496,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('id_scheduled', 'integer', [
                 'null' => false,
@@ -529,7 +529,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('id_scheduled', 'integer', [
                 'null' => false,
@@ -560,7 +560,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('at', 'datetime', [
                 'null' => false,
@@ -613,7 +613,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('id_user', 'integer', [
                 'null' => false,
@@ -651,7 +651,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('id_user', 'integer', [
                 'null' => false,
@@ -682,7 +682,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('email', 'string', [
                 'null' => false,
@@ -727,7 +727,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('token', 'string', [
                 'null' => false,
@@ -770,7 +770,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('id_user', 'integer', [
                 'null' => false,
@@ -807,7 +807,7 @@ class FirstMigration extends Phinx\Migration\AbstractMigration
             ->addColumn('id', 'integer', [
                 'null' => false,
                 'limit' => MysqlAdapter::INT_REGULAR,
-                'identity' => 'enable',
+                'identity' => true,
             ])
             ->addColumn('url', 'string', [
                 'null' => false,

@@ -32,7 +32,8 @@ class CreatePhoneGroup extends AbstractMigration
      */
     public function change()
     {
-        $this->table('phone_group')
+        $this->table('phone_group', ['id' => false, 'primary_key' => ['id']])
+             ->addColumn('id', 'integer', ['null' => false, 'identity' => true])
              ->addColumn('id_user', 'integer', ['null' => false])
              ->addColumn('name', 'string', ['null' => false, 'limit' => 100])
              ->addColumn('created_at', 'timestamp', ['null' => false, 'default' => 'CURRENT_TIMESTAMP'])
@@ -40,7 +41,8 @@ class CreatePhoneGroup extends AbstractMigration
              ->addForeignKey('id_user', 'user', 'id', ['delete' => 'CASCADE', 'update' => 'CASCADE'])
              ->create();
 
-        $this->table('phone_group_phone')
+        $this->table('phone_group_phone', ['id' => false, 'primary_key' => ['id']])
+             ->addColumn('id', 'integer', ['null' => false, 'identity' => true])
              ->addColumn('id_phone_group', 'integer', ['null' => false])
              ->addColumn('id_phone', 'integer', ['null' => false])
              ->addColumn('created_at', 'timestamp', ['null' => false, 'default' => 'CURRENT_TIMESTAMP'])
